@@ -1,0 +1,249 @@
+{
+    "operations": {
+        "events.get": {
+            "httpMethod": "GET",
+            "uri": "events",
+            "parameters": {
+                "start": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "Which page number of results to show"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                },
+                "verbose": {
+                    "location": "query",
+                    "type": "string",
+                    "description": "Whether to return verbose detail in the results",
+                    "enum": [
+                        "yes"
+                    ]
+                },
+                "filter": {
+                    "location": "query",
+                    "type": "string",
+                    "enum": [
+                        "",
+                        "hot",
+                        "upcoming",
+                        "past",
+                        "cfp"
+                    ]
+                }
+            }
+        },
+
+        "event.get": {
+            "httpMethod": "GET",
+            "uri": "events/{eventId}",
+            "parameters": {
+                "eventId": {
+                    "location": "uri",
+                    "type": "integer",
+                    "description": "ID of the event to fetch"
+                },
+                "verbose": {
+                    "location": "query",
+                    "type": "string",
+                    "description": "Whether to return verbose detail in the results",
+                    "enum": [
+                        "yes"
+                    ]
+                }
+            }
+        },
+
+        "event.comments.get": {
+            "httpMethod": "GET",
+            "uri": "events/{eventId}/comments",
+            "parameters": {
+                "eventId": {
+                    "location": "uri",
+                    "type": "integer",
+                    "description": "ID of the event to fetch comments for"
+                },
+                "verbose": {
+                    "location": "query",
+                    "type": "string",
+                    "description": "Whether to return verbose detail in the results",
+                    "enum": [
+                        "yes"
+                    ]
+                },
+                "start": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "Which page number of results to show"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                }
+            }
+        },
+
+        "event.talks.get": {
+            "httpMethod": "GET",
+            "uri": "events/{eventId}/talks",
+            "parameters": {
+                "eventId": {
+                    "location": "uri",
+                    "type": "integer",
+                    "description": "ID of the event to fetch talks for"
+                },
+                "verbose": {
+                    "location": "query",
+                    "type": "string",
+                    "description": "Whether to return verbose detail in the results",
+                    "enum": [
+                        "yes"
+                    ]
+                },
+                "start": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "Which page number of results to show"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                }
+            }
+        },
+
+        "talk.get": {
+            "httpMethod": "GET",
+            "uri": "talks/{talkId}",
+            "parameters": {
+                "talkId": {
+                    "location": "uri",
+                    "type": "integer",
+                    "description": "ID of the talk to fetch"
+                },
+                "verbose": {
+                    "location": "query",
+                    "type": "string",
+                    "description": "Whether to return verbose detail in the results",
+                    "enum": [
+                        "yes"
+                    ]
+                }
+            }
+        },
+
+        "talk.comments.get": {
+            "httpMethod": "GET",
+            "uri": "talks/{talkId}/comments",
+            "parameters": {
+                "talkId": {
+                    "location": "uri",
+                    "type": "integer",
+                    "description": "ID of the talk to fetch comments for"
+                },
+                "verbose": {
+                    "location": "query",
+                    "type": "string",
+                    "description": "Whether to return verbose detail in the results",
+                    "enum": [
+                        "yes"
+                    ]
+                },
+                "start": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "Which page number of results to show"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                }
+            }
+        },
+
+        "user.get": {
+            "httpMethod": "GET",
+            "uri": "users/{userId}",
+            "parameters": {
+                "userId": {
+                    "location": "uri",
+                    "type": "integer",
+                    "description": "ID of the user to fetch"
+                },
+                "verbose": {
+                    "location": "query",
+                    "type": "string",
+                    "description": "Whether to return verbose detail in the results",
+                    "enum": [
+                        "yes"
+                    ]
+                }
+            }
+        },
+
+        "events.attended.get": {
+            "httpMethod": "GET",
+            "uri": "users/{userId}/attended",
+            "parameters": {
+                "userId": {
+                    "location": "uri",
+                    "type": "integer",
+                    "description": "ID of the user to fetch attended events for"
+                },
+                "verbose": {
+                    "location": "query",
+                    "type": "string",
+                    "description": "Whether to return verbose detail in the results",
+                    "enum": [
+                        "yes"
+                    ]
+                },
+                "start": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "Which page number of results to show"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                }
+            }
+        },
+
+        "talks.byuser.get": {
+            "httpMethod": "GET",
+            "uri": "users/{userId}/talks",
+            "parameters": {
+                "userId": {
+                    "location": "uri",
+                    "type": "integer",
+                    "description": "ID of the user to whose talks should be returned"
+                },
+                "verbose": {
+                    "location": "query",
+                    "type": "string",
+                    "description": "Whether to return verbose detail in the results",
+                    "enum": [
+                        "yes"
+                    ]
+                },
+                "start": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "Which page number of results to show"
+                },
+                "resultsperpage": {
+                    "location": "query",
+                    "type": "integer",
+                    "description": "How many results to show per page in the results (zero for no pagination)"
+                }
+            }
+        }
+    }
+}
