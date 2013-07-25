@@ -1,5 +1,5 @@
 {
-    "name": "rexxars/joind.in-client",
+    "name": "rexxars/joindin-client",
     "type": "library",
     "description": "Joind.in API client, powered by Guzzle",
     "support": {
