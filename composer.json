@@ -1,7 +1,12 @@
 {
     "name": "rexxars/joind.in-client",
-    "description": "Joind.in API client",
+    "type": "library",
+    "description": "Joind.in API client, powered by Guzzle",
+    "support": {
+        "issues": "https://github.com/rexxars/joind.in-client/issues"
+    },
     "require": {
+        "php": ">=5.3.0",
         "guzzle/guzzle": "3.7.1"
     },
     "license": "MIT",
@@ -10,5 +15,10 @@
             "name": "Espen Hovlandsdal",
             "email": "espen@hovlandsdal.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": {
+            "JoindIn": "library"
+        }
+    }
 }
