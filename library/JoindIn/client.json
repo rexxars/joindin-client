@@ -40,6 +40,14 @@
                 "stub": {
                     "location": "query",
                     "type": "string"
+                },
+                "startdate": {
+                    "location": "query",
+                    "type": "string"
+                },
+                "enddate": {
+                    "location": "query",
+                    "type": "string"
                 }
             }
         },
