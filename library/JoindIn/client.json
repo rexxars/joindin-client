@@ -32,6 +32,14 @@
                         "past",
                         "cfp"
                     ]
+                },
+                "title": {
+                    "location": "query",
+                    "type": "string"
+                },
+                "stub": {
+                    "location": "query",
+                    "type": "string"
                 }
             }
         },
